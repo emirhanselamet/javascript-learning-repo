@@ -1,0 +1,7 @@
+.fas{
+    cursor: pointer;
+}
+.card-img, .card-img-bottom, .card-img-top{
+    width: 50px !important;
+    height: 50px !important;
+}
