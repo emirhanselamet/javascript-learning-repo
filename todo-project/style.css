@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#header{
+    font-size: 25px;
+}
+.card{
+    border: 1px solid  rgb(226, 207, 207) !important;
+}
+.btn{
+    float: right;
+}
+.list-group{
+} 
+.fa, .fas{
+float: right;
+font-size: 30px;
+}
