@@ -84,7 +84,6 @@ function init(settings){
         }
         showSlide(index);
 
-    },settings.duration)
     },settings.duration);
 
 
