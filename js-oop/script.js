@@ -27,10 +27,10 @@ let Person = function(name,yearOfBirth,job){
 let emirhan = new Person('emirhan',2005,'student');
 let teacher = new Person('teacher',1989,'teacher');
 
-console.log(yigit.name);
-console.log(yigit.yearOfBirth);
-console.log(yigit.job);
-console.log(yigit.calculateAge());
+console.log(emirhan.name);
+console.log(emirhan.yearOfBirth);
+console.log(emirhan.job);
+console.log(emirhan.calculateAge());
 
 console.log('***************');
 
