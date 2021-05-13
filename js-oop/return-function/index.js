@@ -16,10 +16,12 @@ function Question(hobby) {
      break;
 
      case 'development':
-          
+
      break;
 
      default:
  }
 
 }
+var carQuestion = Question('car');
+carQuestion('Emirhan');
