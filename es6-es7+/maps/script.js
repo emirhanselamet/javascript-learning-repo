@@ -9,6 +9,9 @@ val = numbers;
 val = numbers.get(1);
 val = numbers.get('2');
 
-
+val = numbers.size;
+val = numbers.has(1);
+val = numbers.has('four');
+val = numbers.delete('4');
 
 console.log(val);
