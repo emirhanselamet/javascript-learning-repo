@@ -23,3 +23,7 @@ for (var [key, value] of numbers) {
 for (var [key, value] of numbers.entries()) {
     console.log(key + '=' + value);
 }
+
+numbers.forEach(function (key,value) {
+    console.log(key +' - '+value);
+})
