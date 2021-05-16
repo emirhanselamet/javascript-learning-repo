@@ -15,3 +15,11 @@ val = numbers.has('four');
 val = numbers.delete('4');
 
 console.log(val);
+
+for (var [key, value] of numbers) {
+    console.log(key + '=' + value);
+}
+
+for (var [key, value] of numbers.entries()) {
+    console.log(key + '=' + value);
+}
