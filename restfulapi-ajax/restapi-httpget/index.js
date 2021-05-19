@@ -72,7 +72,7 @@ function postData() {
         body : "new body"
     }
     var json = JSON.stringify(data);
-    var url = "https://jsonplaceholder.typicode.com/posts/" 
+    var url = "https://jsonplaceholder.typicode.com/posts" 
     var xhr = new XMLHttpRequest();
     xhr.open('POST',url,true);
     xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
