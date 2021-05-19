@@ -21,9 +21,8 @@ xhr.send();
 
 console.log('hello');
 
-
 /*
- readyState :
+readyState :
 
 0: request not initialized 
 1: server connection established
