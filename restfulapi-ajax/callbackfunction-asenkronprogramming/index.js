@@ -6,15 +6,28 @@ var products =[
 ]
 let added  = true;
 function addProducts(prd,callback) {
-    if (added) {
-        setTimeout(()=>{
+    return new Promise(function (resolve,reject) {  
+        setTimeout(() => {
             products.push(prd);
-            callback(null,prd);
-        },2000);
-    }
-    else{
-        callback('500',prd);
-    }
+            let added =false;//true
+            if (added) {
+                resolve();
+            }
+            else{
+                reject('hata: 500');
+            }
+        }, 1000);
+    });
+
+    // if (added) {
+    //     setTimeout(()=>{
+    //         products.push(prd);
+    //         callback(null,prd);
+    //     },2000);
+    // }
+    // else{
+    //     callback('500',prd);
+    // }
 
     
 }
@@ -25,11 +38,14 @@ function getProduct() {
         })
     }, (1000));
 }
-addProducts({id:5,name:'İphone X123',price:40000},function(err,data){
-    if (err) {
-        console.log('hata: '+err);
-    }
-    else{
-        console.log(data);
-    }
+// addProducts({id:5,name:'İphone X123',price:40000},function(err,data){
+//     if (err) {
+//         console.log('hata: '+err);
+//     }
+//     else{
+//         console.log(data);
+//     }
+// });
+addProducts({id:5,name:'İphone X123',price:40000}).then(getProduct).catch(function(err){
+    console.log(err);
 });
