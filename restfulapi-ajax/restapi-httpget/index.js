@@ -68,8 +68,8 @@ function getAll() {
 function postData() {  
     const data = {
         userId : 1,
-        title : "new title",
-        body : "new body"
+        title : "Title 1",
+        body : "Bodu text"
     }
     var json = JSON.stringify(data);
     var url = "https://jsonplaceholder.typicode.com/posts" 
