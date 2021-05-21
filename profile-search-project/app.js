@@ -1,22 +1,31 @@
 const profile = new Profile();
+const ui = new UI();
 const searchProfile = document.querySelector('#searchProfile');
 
 
-searchProfile.addEventListener('keyup',(event)=>{
-    let text =  event.target.value;
+searchProfile.addEventListener('keyup', (event) => {
+    ui.clear();
+    let text = event.target.value;
 
-    if(text!==''){
-       profile.getProfile(text)
-        .then(res => {
-                if(res.profile.length === 0){
+    if (text !== '') {
+        profile.getProfile(text)
+            .then(res => {
+                if (res.profile.length === 0) {
+                    ui.showAlert(text);
+                } else {
 
-                }else{
-                    console.log(res.profile[0]);
-                }        
-            
-            })   
-        }
-        
+                    ui.showProfile(res.profile[0]);
+                    ui.showTodo(res.todo);
+                    ui.showProfile(res.image);
+                    
+                }
+
+            })
+            .catch(res => {
+                ui.showAlert(text);
+            })
+    }
+
 
 });
 
