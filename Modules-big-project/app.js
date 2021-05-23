@@ -38,7 +38,7 @@ const ProductContoller = (function () {
 const UIContoller = (function () {
 
     const Selectors = {
-        productList : "#itemlist"
+        productList: "#itemlist"
     }
 
 
@@ -57,10 +57,10 @@ const UIContoller = (function () {
             `;
             });
 
-            
+
             document.querySelector(Selectors.productList).innerHTML = html;
         },
-        getSelectors : function () {  
+        getSelectors: function () {
             return Selectors;
         }
     }
