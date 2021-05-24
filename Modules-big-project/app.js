@@ -25,15 +25,15 @@ const ProductContoller = (function () {
         getData: function () {
             return data;
         },
-        addProduct: function (name, pric) {
+        addProduct: function (name, price) {
             let id;
-            if (data.items.length > 0) {
-                id = data.items[data.prodcuts.length - 1].id + 1;
+            if (data.products.length > 0) {
+                id = data.products[data.products.length - 1].id + 1;
             } else {
                 id = 0;
             }
             const newProduct = new Product(id, name, parseFloat(price));
-            data.items.push(newProduct);
+            data.products.push(newProduct);
             return newProduct;
         }
     }
@@ -58,7 +58,7 @@ const UIContoller = (function () {
         createProductList: function (products) {
             let html = '';
 
-            prodcuts.forEach(prd => {
+            products.forEach(prd => {
                 html += `
             <tr>
             <td>${prd.id}</td>
@@ -96,6 +96,7 @@ const UIContoller = (function () {
         }
     }
 })();
+
 //APP Controller
 const App = (function (ProductCtrl, UICtrl) {
     const UISelectors = UIContoller.getSelectors();
@@ -126,7 +127,7 @@ const App = (function (ProductCtrl, UICtrl) {
         init: function () {
             console.log('starting app');
 
-            const prodcuts = ProductCtrl.getProducts();
+            const products = ProductCtrl.getProducts();
             if (products.lenghts==0) {
                 UICtrl.hideCard();
             }else{
