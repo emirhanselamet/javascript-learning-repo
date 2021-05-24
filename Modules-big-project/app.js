@@ -1,5 +1,3 @@
-const { UI } = require("winjs");
-
 //Storage Controller
 const StorageContoller = (function () {
 
