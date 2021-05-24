@@ -44,6 +44,15 @@ const ProductController = (function () {
             const newProduct = new Product(id, name, parseFloat(price));
             data.products.push(newProduct);
             return newProduct;
+        },
+        getTotal : function () {  
+            let total = 0;
+
+            data.products.forEach(item => {
+                total+=item.price;
+            });
+            data.totalPrice = total;
+            return data.totalPrice;
         }
     }
 
@@ -59,7 +68,9 @@ const UIController = (function () {
         addButton: '.addBtn',
         productName: '#productName',
         productPrice: '#productPrice',
-        productCard: '#productCard'
+        productCard: '#productCard',
+        totalTL:'#total-tl',
+        totalDolar:'#total-dolar'
     }
 
     return {
@@ -141,6 +152,10 @@ const App = (function (ProductCtrl, UICtrl) {
 
             // add item to list
             UIController.addProduct(newProduct);
+
+            //get total
+            const total = ProductCtrl.getTotal();
+            
 
             // clear inputs
             UIController.clearInputs();
