@@ -6,6 +6,7 @@ const StorageContoller = (function () {
 
 //Product Controller
 const ProductContoller = (function () {
+    //Private
     const Product = function (id, name, price) {
         this.id = id;
         this.name = name;
