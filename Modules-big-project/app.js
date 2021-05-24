@@ -7,8 +7,6 @@ const StorageController = (function () {
 })();
 
 
-//Product Controller
-const ProductContoller = (function () {
 
 // Product Controller
 const ProductController = (function () {
